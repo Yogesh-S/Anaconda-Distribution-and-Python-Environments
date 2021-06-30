@@ -40,12 +40,33 @@ Inside a new Conda installation, the root environment is activated by default, a
 
 `>>> (base) C:\WINDOWS\system32>`
 
-Use the following command to activate `myenv`
+Use the following command to activate `mynewenv`
 ```
 activate mynewenv
 ```
 
 `(mynewenv) C:\WINDOWS\system32>`
+
+#### 3. Switching environments in Jupyter Notebook
+To switch kernels in Jupyter Notebook
+```
+conda install ipykernel
+```
+After running the above code Go to Jupyter notebook >> New >> Notebook >> Python (conda env:mynewenv)
+
+Note: Jupyter Notebook runs in the same environment it was created in irrespective of the environments you choose to open with.
+
+To know which env the notebook is running in run the following in Notebook
+```
+import sys
+print(sys.executable)
+```
+
+To deactivate `mynewenv`
+```
+conda deactivate
+```
+
 
 ```
 conda list
