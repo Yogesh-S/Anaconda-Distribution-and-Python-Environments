@@ -66,8 +66,48 @@ To deactivate `mynewenv`
 ```
 conda deactivate
 ```
+### Few other important commands
+To list out the available environments in a Conda installation
+```
+conda env list
+```
+```
+>>> # conda environments:
+#
+base                  *  C:\Program Files\Anaconda3
+flappybird               C:\Program Files\Anaconda3\envs\flappybird
+mynewenv                 C:\Program Files\Anaconda3\envs\mynewenv
+style-transfer           C:\Program Files\Anaconda3\envs\style-transfer
+test_latest              C:\Program Files\Anaconda3\envs\test_latest
+```
+To get the Conda version of the currently active environment,
+```
+conda --version
+```
+```
+>>> conda 4.10.1
+```
 
+To get a detailed list of information about the environment,
+```
+conda info
+```
+```
+>>>
+     active environment : base
+    active env location : C:\Program Files\Anaconda3
+            shell level : 1
+       user config file : C:\Users\INYOS1\.condarc
+ populated config files : C:\Users\INYOS1\.condarc
+          conda version : 4.10.1
+    conda-build version : 3.18.8
+         python version : 3.7.3.final.0
+.
+.
+.
+```
 
+To list out all the installed packages in the currently active environment,
 ```
 conda list
 ```
@@ -82,4 +122,52 @@ alabaster                 0.7.12                   py37_0
 anaconda-client           1.8.0            py37haa95532_0
 anaconda-navigator        1.9.7                    py37_0
 anaconda-project          0.10.0             pyhd3eb1b0_0
+.
+.
+.
 ```
+
+To install a package (for instanceseaborn) that is inside a channel that is on your channel list, run this command 
+```
+conda install seaborn
+```
+
+You can also specify the package’s version:
+```
+conda install seaborn=0.7.0
+```
+
+To update all the installed packages (in the current environment):
+```
+conda update
+```
+
+To update a specific package
+```
+conda update seaborn
+```
+
+To remove the seaborn package
+```
+conda remove seaborn
+```
+
+#### Changing an environment’s Python version
+Python is also a package. First, you should list out the available Python versions:
+```
+conda search -f python
+```
+```
+>>> Loading channels: done
+# Name                       Version           Build  Channel
+python                        2.7.13     h1b6d89f_16  pkgs/main
+python                        2.7.13     h9912b81_15  pkgs/main
+python                        2.7.13     hb034564_12  pkgs/main
+python                        2.7.14     h2765ee6_18  pkgs/main
+...
+python                         3.9.1      h6244533_2  pkgs/main
+python                         3.9.2      h6244533_0  pkgs/main
+python                         3.9.4      h6244533_0  pkgs/main
+python                         3.9.5      h6244533_3  pkgs/main
+```
+
