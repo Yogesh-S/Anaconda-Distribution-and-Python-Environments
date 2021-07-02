@@ -2,7 +2,7 @@
 
 
 ### Why you need multiple Python environments?
-- You have an application (developed by yourself or by someone else) that once worked beautifully. But now you’ve tried to run it, and it is not working. Perhaps one of the packages is no longer compatible with the other parts of your program (due to the so-called breaking changes). A possible solution is to set up a new environment for you application, that contains the Python version and the packages that are completely compatible with your application.
+- You have an application (developed by yourself or by someone else) that once worked beautifully. But now you’ve tried to run it, and it is not working. Perhaps one of the packages is no longer compatible with the other parts of your program (due to the so-called breaking changes). A possible solution is to set up a new environment for your application, that contains the Python version and the packages that are completely compatible with your application.
 - You are collaborating with someone else, and you want to make sure that your application is working on your team member’s computer, and vice versa, so you can also set up an environment for your co-worker’s application(s).
 
 ### Package and environment managers
@@ -48,15 +48,15 @@ activate mynewenv
 `(mynewenv) C:\WINDOWS\system32>`
 
 #### 3. Switching environments in Jupyter Notebook
-To switch kernels in Jupyter Notebook
+After activating enviroment run the following command
 ```
 conda install ipykernel
 ```
-After running the above code Go to Jupyter notebook >> New >> Notebook >> Python (conda env:mynewenv)
+then `Go to Jupyter notebook >> New >> Notebook >> Python (conda env:mynewenv)`
 
-Note: Jupyter Notebook runs in the same environment it was created in irrespective of the environments you choose to open with.
+Note: Jupyter Notebook runs in the same environment it was created in irrespective of the environments you choose to open.
 
-To know which env the notebook is running in run the following in Notebook
+To know in which environment Jupyter Notebook executes
 ```
 import sys
 print(sys.executable)
@@ -66,7 +66,13 @@ To deactivate `mynewenv`
 ```
 conda deactivate
 ```
-### Few other important commands
+
+To remove environment permanently
+```
+conda env remove -n mynewenv
+```
+
+### Other usefull commands
 To list out the available environments in a Conda installation
 ```
 conda env list
@@ -93,8 +99,7 @@ To get a detailed list of information about the environment,
 conda info
 ```
 ```
->>>
-     active environment : base
+>>>  active environment : base
     active env location : C:\Program Files\Anaconda3
             shell level : 1
        user config file : C:\Users\INYOS1\.condarc
@@ -102,9 +107,7 @@ conda info
           conda version : 4.10.1
     conda-build version : 3.18.8
          python version : 3.7.3.final.0
-.
-.
-.
+...
 ```
 
 To list out all the installed packages in the currently active environment,
@@ -122,12 +125,10 @@ alabaster                 0.7.12                   py37_0
 anaconda-client           1.8.0            py37haa95532_0
 anaconda-navigator        1.9.7                    py37_0
 anaconda-project          0.10.0             pyhd3eb1b0_0
-.
-.
-.
+...
 ```
 
-To install a package (for instanceseaborn) that is inside a channel that is on your channel list, run this command 
+To install a package (for instance seaborn)
 ```
 conda install seaborn
 ```
@@ -171,3 +172,21 @@ python                         3.9.4      h6244533_0  pkgs/main
 python                         3.9.5      h6244533_3  pkgs/main
 ```
 
+To update the Python version to the latest version of its branch
+```
+conda update python
+```
+
+Update to specific python version
+```
+conda install python=3.9.1
+```
+
+#### Adding PIP packages
+PIP packages are also installable into Conda environments.
+```
+pip install lightgbm
+```
+<br />
+
+For detailed explaination of Python envirnoments and how to manage them with Conda [refer this document](https://www.freecodecamp.org/news/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c/).
