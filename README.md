@@ -1,5 +1,14 @@
 # Python-Environments
+### Anaconda Distribution
+- Anaconda is a distribution of packages built specifically for data science. Anaconda is a program to manage (install, upgrade, or uninstall) packages and environments to use with Python. It's simple to install packages with Anaconda and create virtual environments to work on multiple projects conveniently.
+- Anaconda is a software distribution that includes the following:
+  - **Anaconda Navigator** - It is a graphical user interface that helps open up any installed applications, such as Jupyter notebook
+  - **conda** - A command-line utility for package and environment management.
+  - **Python** - The latest version of Python gets installed as an individual package.
+  - Over 160 scientific packages and their dependencies are also installed.
 
+### What is Python Package?
+- A package is a bunch of modules, where each module consists of a set of classes and function definitions. After installing a particular package, you can import and use the functions defined in that package.
 
 ### Why you need multiple Python environments?
 - You have an application (developed by yourself or by someone else) that once worked beautifully. But now you’ve tried to run it, and it is not working. Perhaps one of the packages is no longer compatible with the other parts of your program (due to the so-called breaking changes). A possible solution is to set up a new environment for your application, that contains the Python version and the packages that are completely compatible with your application.
@@ -10,10 +19,9 @@
 - **Conda** (a package and environment manager)
 
 ### Why conda is better than PIP?
-- Clear Structure: It is easy to understand its directory structure
-- Transparent File Management: It doesn’t install files outside its directory
-- Flexibility: It contains a lot of packages (PIP packages are also installable into Conda environments)
-- Multipurpose: It is not only for managing Python environments and packages — you can also use it for R (a programming language for statistical computing)
+- The available packages available from the Anaconda distribution in conda focus on data science, whereas pip is for general use. Conda installs precompiled packages. For example, the Anaconda distribution comes with Numpy, Scipy, and Scikit-learn compiled with the MKL library, speeding up various math operations. But, sometimes, you may need packages other than the ones listed on the [Anaconda distribution](https://docs.anaconda.com/anaconda/packages/pkg-docs/). These packages can be installed using PIP. Pip can install any package listed on the [Python Package Index](https://pypi.org/) (PyPI).
+- Transparent File Management: conda doesn’t install files outside its directory
+- Multipurpose: conda is not only for managing Python environments and packages — you can also use it for R (a programming language for statistical computing)
 
 ### Python environments: root and additional
 The process looks like this: the installer installs **Conda** first. Then, Conda creates a **root environment** that contains two things:
