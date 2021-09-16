@@ -2,10 +2,11 @@
 ### Anaconda Distribution
 - Anaconda is a distribution of packages built specifically for data science. Anaconda is a program to manage (install, upgrade, or uninstall) packages and environments to use with Python. It's simple to install packages with Anaconda and create virtual environments to work on multiple projects conveniently.
 - Anaconda is a software distribution that includes the following:
-  - **Anaconda Navigator** - It is a graphical user interface that helps open up any installed applications, such as Jupyter notebook
-  - **conda** - A command-line utility for package and environment management.
+  - **Anaconda Navigator** - a GUI for managing your environments, packages and to open any installed application.
+  - **conda** - a command-line utility
   - **Python** - The latest version of Python gets installed as an individual package.
-  - Over 160 scientific packages and their dependencies are also installed.
+  - **Anaconda Prompt** - (Only for Windows) a terminal where you can use the command-line interface to manage your environments and packages
+  - A bunch of applications, such as **Spyder**. It is an IDE geared toward scientific development. In total, over 160 scientific packages and their dependencies are also installed.
 
 ### What is Python Package?
 - A package is a bunch of modules, where each module consists of a set of classes and function definitions. After installing a particular package, you can import and use the functions defined in that package.
@@ -60,9 +61,13 @@ After activating enviroment run the following command
 ```
 conda install ipykernel
 ```
-then `Go to Jupyter notebook >> New >> Notebook >> Python (conda env:mynewenv)`
+**Above commands should be executed only once to create and activate new environments in Jupyter Notebook**
 
-Note: Jupyter Notebook runs in the same environment it was created in irrespective of the environments you choose to open.
+To create & run Notebook in the new enviornment
+
+`Type "Jupyter Notebook" in Windows Search Bar >> Jupyter notebook tab >> New >> Notebook >> Python (conda env:mynewenv)`
+
+**Note:** Jupyter Notebook runs in the same environment it was created in irrespective of the environments you choose to open in future.
 
 To know in which environment Jupyter Notebook executes
 ```
@@ -79,6 +84,7 @@ To remove environment permanently
 ```
 conda env remove -n mynewenv
 ```
+
 
 ### Other usefull commands
 To list out the available environments in a Conda installation
