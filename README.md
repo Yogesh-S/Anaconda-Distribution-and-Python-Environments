@@ -1,4 +1,4 @@
-# Python-Environments
+# Anaconda Distribution & Python-Environments
 ### Anaconda Distribution
 - Anaconda is a distribution of packages built specifically for data science. Anaconda is a program to manage (install, upgrade, or uninstall) packages and environments to use with Python. It's simple to install packages with Anaconda and create virtual environments to work on multiple projects conveniently.
 - Anaconda is a software distribution that includes the following:
