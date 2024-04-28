@@ -59,6 +59,7 @@ activate mynewenv
 #### 3. Switching environments in Jupyter Notebook
 After activating enviroment run the following command
 ```
+conda install jupyter
 conda install ipykernel
 ```
 **Above commands should be executed only once to create and activate new environments in Jupyter Notebook**
