@@ -31,6 +31,15 @@ The process looks like this: the installer installs **Conda** first. Then, Conda
 
 Next to the root environment, you can create as many **additional environments** as you want. And the whole point is that these additional environments can contain different versions of Pythons and other packages.
 
+### Adding path to System variables
+- Once the Conda package is installed for the first time on your system, you need to add the relevant installation paths to your environment variables. After updating the environment variables, please restart your system for the changes to take effect.
+- Go to environment variables --> system variables --> Path --> add the following paths
+```
+C:\Users\......\AppData\Local\anaconda3
+C:\Users\......\AppData\Local\anaconda3\Scripts
+C:\Users\......\AppData\Local\anaconda3\Library\bin
+```
+
 ### Directory structure
 Conda system is installed into a single directory usually the path is: `C:\Program Files\Anaconda3`. It contains the root environment and two important directories:
 
